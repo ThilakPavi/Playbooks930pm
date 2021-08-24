@@ -1,0 +1,12 @@
+---
+- name: Usimg variables
+  hosts: all
+  become: true
+  
+  vars_files:
+       - user.yml
+
+  tasks:
+       - name: Creating {{user1}}
+         user:
+              name: "{{user1}}"

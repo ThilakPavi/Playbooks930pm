@@ -1,0 +1,12 @@
+---
+- name: Usimg variables
+  hosts: all
+  become: true
+  
+  vars:
+      user: sunny
+
+  tasks:
+       - name: Creating "{{user}}"
+         user:
+              name: "{{user}}"
